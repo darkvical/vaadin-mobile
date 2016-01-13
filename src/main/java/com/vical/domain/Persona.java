@@ -2,6 +2,9 @@ package com.vical.domain;
 
 import java.util.Date;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class Persona {
 	private String codigo;
 	public String getCodigo() { return codigo; }

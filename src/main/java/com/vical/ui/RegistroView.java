@@ -11,13 +11,19 @@ import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.CssLayout;
 import com.vaadin.ui.Notification;
 import com.vaadin.ui.TextField;
+import com.vical.domain.Persona;
+import com.vical.service.IPersonaService;
+import com.vical.service.impl.PersonaServiceImpl;
 
 @SuppressWarnings("serial")
 public class RegistroView extends NavigationView implements ClickListener {
 
 	private static final String ID_SUBMIT = "id_submit";
+//	@Autowired
+	private IPersonaService personaService = new PersonaServiceImpl();
 	
     public RegistroView() {
+//    	Inject.inject(this);
         setCaption("Registro");
         final VerticalComponentGroup content = new VerticalComponentGroup();
 
@@ -46,8 +52,15 @@ public class RegistroView extends NavigationView implements ClickListener {
 	@Override
 	public void buttonClick(ClickEvent event) {
 		if(event.getButton().getId().equals(ID_SUBMIT)){
+			guardarPersona();
 			getNavigationManager().navigateTo(getPreviousComponent());
 			Notification.show("Gracias");
 		}
+	}
+
+	private void guardarPersona() {
+		Persona persona = new Persona();
+		persona.setCodigo("jaja");
+		personaService.crearPersona(persona);
 	}
 }
