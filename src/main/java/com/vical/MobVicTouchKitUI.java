@@ -1,7 +1,5 @@
 package com.vical;
 
-import com.vical.ui.*;
-import com.vical.gwt.client.*;
 import com.vaadin.addon.touchkit.annotations.CacheManifestEnabled;
 import com.vaadin.addon.touchkit.annotations.OfflineModeEnabled;
 import com.vaadin.addon.touchkit.extensions.OfflineMode;
@@ -12,9 +10,10 @@ import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Widgetset;
 import com.vaadin.server.FontAwesome;
 import com.vaadin.server.VaadinRequest;
-import com.vaadin.ui.Label;
 import com.vaadin.ui.TabSheet.Tab;
 import com.vaadin.ui.UI;
+import com.vical.gwt.client.MobVicPersistToServerRpc;
+import com.vical.ui.MenuView;
 
 /**
  * The UI's "main" class
@@ -49,10 +48,10 @@ public class MobVicTouchKitUI extends UI {
         Tab tabInicio;
         tabInicio = tabBarView.addTab(navigationManager);
         tabInicio.setIcon(FontAwesome.BOOK);
-        tabInicio = tabBarView.addTab(new Label("Tab 2"), "Tab 2");
-        tabInicio.setIcon(FontAwesome.AMBULANCE);
-        tabInicio = tabBarView.addTab(new Label("Tab 3"), "Tab 3");
-        tabInicio.setIcon(FontAwesome.DOWNLOAD);
+//        tabInicio = tabBarView.addTab(new Label("Tab 2"), "Tab 2");
+//        tabInicio.setIcon(FontAwesome.AMBULANCE);
+//        tabInicio = tabBarView.addTab(new Label("Tab 3"), "Tab 3");
+//        tabInicio.setIcon(FontAwesome.DOWNLOAD);
         setContent(tabBarView);
 
         // Use of the OfflineMode connector is optional.

@@ -21,9 +21,8 @@
 	<context:annotation-config/>  
 	<context:component-scan base-package="com.vical.dao.nosql" />
 	
-	<!-- MongoDB -->
-	
-	<mongo:db-factory id="mongoDbFactory" dbname="vicalmobile" host="localhost"  port="27017" />
+	<!-- MongoDB -->	
+	<mongo:db-factory id="mongoDbFactory" dbname="${mongo.dbname}" host="${mongo.host}"  port="${mongo.port}" />
 	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
 		<constructor-arg ref="mongoDbFactory" />
 		<property name="writeConcern" value="SAFE" />

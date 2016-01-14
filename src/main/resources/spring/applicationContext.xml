@@ -17,11 +17,10 @@
 						http://www.springframework.org/schema/jee 
 						http://www.springframework.org/schema/jee/spring-jee-4.0.xsd
 	">	
-	
-<!-- 	<bean p:location="classpath:config/placom.properties" class="org.springframework.beans.factory.config.PropertiesFactoryBean" id="deployProperties"/> -->
-	
+	<bean p:location="classpath:vicalmob.properties" class="org.springframework.beans.factory.config.PropertiesFactoryBean" id="deployProperties"/>
 	<context:spring-configured/>
-<!-- 	<context:property-placeholder properties-ref="deployProperties"/> -->
+	<context:property-placeholder properties-ref="deployProperties"/>
+	
 	<import resource="applicationContext-service.xml"/>
 	<import resource="applicationContext-dao.xml"/>
 </beans>

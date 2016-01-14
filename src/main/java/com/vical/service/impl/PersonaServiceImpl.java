@@ -1,6 +1,9 @@
 package com.vical.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
 import com.vical.dao.IPersonaDAO;
@@ -17,4 +20,12 @@ public class PersonaServiceImpl implements IPersonaService{
 	public void crearPersona(Persona persona) {
 		personaDAO.crear(persona);
 	}
+
+	@Override
+	public List<Persona> listarPersonas(Query query) {
+		if(query != null){
+			return personaDAO.obtenerEntidades(query);
+		}
+		return null;
+	}	
 }
