@@ -1,4 +1,4 @@
-package com.vical;
+package com.vical.server;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,6 +8,7 @@ import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.server.ServiceException;
 import com.vaadin.server.SessionInitEvent;
 import com.vaadin.server.SessionInitListener;
+import com.vical.MobVicTouchKitUI;
 
 @SuppressWarnings("serial")
 @WebServlet("/*")

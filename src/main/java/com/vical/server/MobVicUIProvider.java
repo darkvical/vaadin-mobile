@@ -1,9 +1,11 @@
-package com.vical;
+package com.vical.server;
 
 import com.vaadin.server.UIClassSelectionEvent;
 import com.vaadin.server.UIProvider;
 import com.vaadin.server.VaadinSession;
 import com.vaadin.ui.UI;
+import com.vical.MobVicFallbackUI;
+import com.vical.MobVicTouchKitUI;
 
 @SuppressWarnings("serial")
 public class MobVicUIProvider extends UIProvider {

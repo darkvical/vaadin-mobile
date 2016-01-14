@@ -1,4 +1,4 @@
-package com.vical;
+package com.vical.server;
 
 import javax.servlet.annotation.WebListener;
 
