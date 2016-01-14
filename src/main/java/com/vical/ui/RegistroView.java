@@ -1,5 +1,7 @@
 package com.vical.ui;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.vaadin.addon.touchkit.ui.DatePicker;
 import com.vaadin.addon.touchkit.ui.EmailField;
 import com.vaadin.addon.touchkit.ui.NavigationView;
@@ -13,17 +15,17 @@ import com.vaadin.ui.Notification;
 import com.vaadin.ui.TextField;
 import com.vical.domain.Persona;
 import com.vical.service.IPersonaService;
-import com.vical.service.impl.PersonaServiceImpl;
+import com.vical.util.Inject;
 
 @SuppressWarnings("serial")
 public class RegistroView extends NavigationView implements ClickListener {
-
 	private static final String ID_SUBMIT = "id_submit";
-//	@Autowired
-	private IPersonaService personaService = new PersonaServiceImpl();
+	
+	@Autowired
+	private IPersonaService personaService;
 	
     public RegistroView() {
-//    	Inject.inject(this);
+    	Inject.inject(this);
         setCaption("Registro");
         final VerticalComponentGroup content = new VerticalComponentGroup();
 
@@ -60,7 +62,7 @@ public class RegistroView extends NavigationView implements ClickListener {
 
 	private void guardarPersona() {
 		Persona persona = new Persona();
-		persona.setCodigo("jaja");
+		persona.setCodigo("VIC");
 		personaService.crearPersona(persona);
 	}
 }

@@ -22,5 +22,6 @@
 	
 	<context:spring-configured/>
 <!-- 	<context:property-placeholder properties-ref="deployProperties"/> -->
+	<import resource="applicationContext-service.xml"/>
 	<import resource="applicationContext-dao.xml"/>
 </beans>

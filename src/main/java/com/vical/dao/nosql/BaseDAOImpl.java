@@ -1,4 +1,4 @@
-package com.vical.dao.nsql;
+package com.vical.dao.nosql;
 
 import java.io.Serializable;
 
@@ -19,5 +19,4 @@ public class BaseDAOImpl<Entidad, Llave extends Serializable> implements IBaseDA
     public void crear(Entidad entidad) {
     	operations.insert(entidad);
     }
-
 }

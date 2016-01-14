@@ -1,4 +1,4 @@
-package com.vical.dao.nsql;
+package com.vical.dao.nosql;
 
 import org.springframework.stereotype.Repository;
 
